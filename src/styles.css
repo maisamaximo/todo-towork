@@ -1,0 +1,163 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  background: #202225;
+}
+
+ul {
+  text-align: left;
+  margin: 30px;
+  padding: 10px;
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  background: #282b30;
+}
+
+li {
+  padding: 15px;
+  margin: 10px;
+  font-size: 1em;
+  color: #eeeeee;
+  background: #36393e;
+  border-radius: 10px;
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+}
+
+li > button {
+  border: none;
+  background: #36393e;
+  font-size: 1em;
+  float: right;
+  opacity: 0.6;
+  transition: opacity 1s;
+}
+
+li > button:hover {
+  opacity: 0.3;
+  transition: opacity 1s;
+  background: #282b30;
+  border-radius: 50px;
+}
+
+i {
+  color: #eeeeee;
+}
+
+button {
+  cursor: pointer;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  background-color: #00adb5;
+  border: none;
+  color: #eeeeee;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: 100;
+  margin: 10px 0;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.add-task {
+  margin-right: 30px;
+}
+
+.cancel {
+  background-color: #9a1f40;
+}
+.button:focus {
+  outline: 0;
+}
+
+#modal {
+  text-align: left;
+  margin: 30px;
+  padding: 10px;
+  background: #282b30;
+  color: #eeeeee;
+  border-radius: 10px;
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+}
+
+input {
+  width: 93%;
+  line-height: 50px;
+  text-indent: 10px;
+  font-size: 1.2em;
+}
+
+input[type="text"] {
+  background-color: #484b51;
+  color: #7f8185;
+  border: none;
+  box-shadow: none;
+}
+
+input:focus {
+  outline: 0 !important;
+}
+
+.danger {
+  opacity: 0.6;
+  background-color: #9a1f40;
+  color: #eeeeee;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.empty-list {
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+.empty-list small {
+  color: #eeeeee;
+}
+
+/* unvisited link */
+span {
+  color: #00adb5;
+}
+
+/* visited link */
+a:visited {
+  color: #127681;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+  background-color: #202225;
+  color: white;
+  text-align: center;
+}

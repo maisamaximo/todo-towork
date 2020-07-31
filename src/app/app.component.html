@@ -1,0 +1,39 @@
+<h1 class="title animate__animated animate__jackInTheBox">{{ title }}</h1>
+
+<div id="modal" *ngIf="mode == 'add'" class="animate__animated animate__flipInX">
+  <form [formGroup]="form">
+    <fieldset>
+      <label for="newTask">Task</label>
+      <input type="text" id="newTask" [(ngModel)]="newTask" placeholder="type your next task..." maxlength="60"
+        formControlName="taskTitle" />
+      <small class="danger" *ngIf="form.controls.taskTitle.invalid && !form.controls.taskTitle.pristine">This input must
+        have between 3
+        and 60 characters</small>
+    </fieldset>
+  </form>
+</div>
+
+<div>
+  <ul class="animate__animated animate__flipInX" *ngIf="mode == 'list'">
+    <p class="text-center empty-list" *ngIf="taskList.length == 0"><small>What is your main focus for today?</small></p>
+    <li *ngFor="let task of taskList">
+      {{ task.title }}
+      <button (click)="removeTask(task)"><i class="icon-remove-sign icon"></i></button>
+      <button><i class="icon-edit"></i></button>
+      <button *ngIf="!task.done" (click)="isDone(task)"><i class="icon-check-empty icon"></i></button>
+      <button *ngIf="task.done" (click)="isDone(task)"><i class="icon-check-sign icon"></i></button>
+    </li>
+  </ul>
+</div>
+
+<button class="button add-task animate__animated animate__flipInX add-button" [disabled]="form.invalid"
+  (click)="addTask();" *ngIf="mode == 'add'"><i class="icon-plus"></i></button>
+<button class="animate__animated animate__flipInX add-button button" (click)="changeMode('add')" *ngIf="mode=='list'"><i
+    class="icon-plus"></i></button>
+<button class="animate__animated animate__flipInX add-button button cancel" (click)="changeMode('list')"
+  *ngIf="mode=='add'"><i class="icon-remove"></i></button>
+
+<footer>
+  made with <span>❤</span> by <strong><a href="https://www.linkedin.com/in/maisa-maximo-ferreira/" target="_blank">Maisa
+      Maximo</a></strong>
+</footer>
